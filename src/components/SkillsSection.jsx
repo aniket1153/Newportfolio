@@ -17,7 +17,7 @@ const skills = [
 
 // Counters Data
 const counters = [
-  { title: "Projects", value: 15 },
+  { title: "Projects", value: 3 },
   { title: "Experience (Months)", value: 6 },
   { title: "Technologies", value: skills.length },
 ];

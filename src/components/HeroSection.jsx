@@ -39,13 +39,13 @@ const techIcons = [
 
 function HeroSection() {
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center px-6 pt-7 relative overflow-hidden">
+    <section className="min-h-screen bg-black flex items-center justify-center px-6 pt-16 md:pt-7 relative overflow-hidden">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-7xl w-full items-center">
 
         {/* Left Content */}
         <div>
           <motion.h2
-            className="text-gray-400 text-lg mb-2"
+            className="text-gray-400 text-3xl md:text-lg mb-2"
             variants={textVariant}
             initial="hidden"
             whileInView="visible"

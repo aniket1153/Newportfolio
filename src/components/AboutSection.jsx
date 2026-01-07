@@ -4,8 +4,8 @@ import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
 
 // Counters data
 const counters = [
-  { title: "Projects", value: 15 },
-  { title: "Experience (Months)", value: 12 },
+  { title: "Projects", value: 3 },
+  { title: "Experience (Months)", value: 6 },
   { title: "Technologies", value: 10 },
 ];
 
@@ -18,8 +18,8 @@ const timeline = [
     description: "Specialized in software development, cloud computing, and web technologies.",
   },
   {
-    title: "Internship - REGO Digital Solutions",
-    subtitle: "Feb 2024 - Nov 2024",
+    title: "Internship at DevifAI Solutions Pvt. Ltd.",
+    subtitle: "June 2025 - Dec 2025",
     icon: <FaBriefcase />,
     description: "Worked on backend and frontend tasks using MERN stack, AWS, and RESTful APIs.",
   },
