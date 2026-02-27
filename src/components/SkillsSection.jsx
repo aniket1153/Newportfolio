@@ -1,18 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaReact, FaNodeJs, FaAws, FaGitAlt, FaDatabase } from "react-icons/fa";
-import { SiMongodb, SiTailwindcss, SiJavascript } from "react-icons/si";
+import { FaReact, FaNodeJs, FaAws, FaGitAlt } from "react-icons/fa";
+import { 
+  SiMongodb, 
+  SiTailwindcss, 
+  SiJavascript, 
+  SiPostgresql, 
+  SiRedis,
+  SiDocker,
+  SiGraphql
+} from "react-icons/si";
 
 // Skills Data
 const skills = [
   { name: "React.js", icon: <FaReact className="text-blue-400" />, level: 90 },
+  { name: "React Native", icon: <FaReact className="text-cyan-400" />, level: 80 },
   { name: "Node.js", icon: <FaNodeJs className="text-green-500" />, level: 85 },
   { name: "MongoDB", icon: <SiMongodb className="text-green-600" />, level: 80 },
+  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-500" />, level: 75 },
+  { name: "Redis", icon: <SiRedis className="text-red-500" />, level: 70 },
   { name: "AWS", icon: <FaAws className="text-yellow-400" />, level: 70 },
   { name: "Git & GitHub", icon: <FaGitAlt className="text-red-500" />, level: 85 },
   { name: "JavaScript (ES6+)", icon: <SiJavascript className="text-yellow-300" />, level: 90 },
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-blue-500" />, level: 85 },
-  { name: "SQL / MySQL", icon: <FaDatabase className="text-gray-400" />, level: 75 },
+  { name: "Docker", icon: <SiDocker className="text-blue-400" />, level: 75 },
+  { name: "GraphQL", icon: <SiGraphql className="text-pink-500" />, level: 70 },
 ];
 
 // Counters Data
@@ -68,13 +80,11 @@ const SkillsSection = () => {
               data-aos="zoom-in"
               className="bg-white/5 border border-white/10 rounded-2xl p-6 group hover:shadow-lg hover:border-white/30 transition relative overflow-hidden"
             >
-              {/* Icon + Skill Name */}
               <div className="flex items-center gap-4 mb-4">
                 <span className="text-2xl">{skill.icon}</span>
                 <h3 className="font-semibold text-lg">{skill.name}</h3>
               </div>
 
-              {/* Progress Bar */}
               <div className="w-full bg-white/10 h-2 rounded-full overflow-hidden">
                 <motion.div
                   className="h-2 bg-blue-400 rounded-full"
@@ -84,7 +94,6 @@ const SkillsSection = () => {
                 />
               </div>
 
-              {/* Neon Hover Glow */}
               <div className="absolute top-0 left-0 w-full h-full bg-blue-400/10 opacity-0 group-hover:opacity-30 transition duration-500 rounded-2xl"></div>
             </motion.div>
           ))}
