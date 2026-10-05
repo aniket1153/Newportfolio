@@ -161,6 +161,30 @@ body {
   100% { transform: rotate(360deg);}
 }
 
+/* Auto-scrolling website preview */
+.site-scroll {
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  animation-name: siteScroll;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.group:hover .site-scroll {
+  animation-play-state: paused;
+}
+
+@keyframes siteScroll {
+  0%, 6% { background-position: 50% 0%; }
+  94%, 100% { background-position: 50% 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-scroll { animation: none; }
+}
+
 /* Glass / Backdrop Blur fallback for mini cards */
 .backdrop-blur-lg {
   backdrop-filter: blur(12px);

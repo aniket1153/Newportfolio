@@ -7,6 +7,7 @@ import ExperienceSection from "../components/ExperienceSection";
 import SkillsSection from "../components/SkillsSection";
 import ProjectsSection from "../components/ProjectsSection";
 import SetuSection from "../components/SetuSection";
+import ClientWorkSection from "../components/ClientWorkSection";
 import ArchitectureSection from "../components/ArchitectureSection";
 import PracticeSection from "../components/PracticeSection";
 import ProfileDetails from "../components/ProfileDetails";
@@ -26,6 +27,7 @@ const HomePage = () => {
       <SkillsSection />
       <ProjectsSection />
       <SetuSection />
+      <ClientWorkSection />
       <ArchitectureSection />
       <PracticeSection />
       <ProfileDetails />
