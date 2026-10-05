@@ -1,9 +1,35 @@
 @import "tailwindcss";
 
-/* ===== Premium Fonts ===== */
+/* ===== Fonts ===== */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+html,
 body {
-  font-family: 'Space Grotesk', sans-serif;
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--font-sans);
   background: black;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* ===== Animated Gradient Background ===== */
@@ -133,12 +159,6 @@ body {
 @keyframes spin {
   0% { transform: rotate(0deg);}
   100% { transform: rotate(360deg);}
-}
-
-/* Premium Fonts */
-body {
-  font-family: 'Outfit', 'Space Grotesk', sans-serif;
-  font-weight: 500;
 }
 
 /* Glass / Backdrop Blur fallback for mini cards */

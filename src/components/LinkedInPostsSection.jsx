@@ -7,7 +7,7 @@ import postImg from "../assets/Post1.png";
 const LinkedInPostsSection = () => {
   return (
     <section
-      className="relative bg-black text-white py-32 px-6 overflow-hidden"
+      className="relative text-white py-32 px-6 overflow-hidden"
       id="linkedin"
     >
       {/* Background Glow */}

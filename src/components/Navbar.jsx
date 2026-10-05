@@ -1,105 +1,73 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+
+const links = [
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#experience", label: "Experience" },
+  { href: "#skills", label: "Skills" },
+  { href: "#projects", label: "Projects" },
+  { href: "#contact", label: "Contact" },
+];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-black/60 backdrop-blur z-50">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-gray-300">
-
-        {/* Logo */}
-        <Link to="/" className="text-white text-xl font-bold">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-black/60 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 text-gray-300">
+        <a href="#home" className="text-xl font-bold text-white">
           Aniket.dev
-        </Link>
+        </a>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-8 items-center">
-          <li>
-            <Link to="/" className="hover:text-white">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/about" className="hover:text-white">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link to="/projects" className="hover:text-white">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link to="/contact" className="hover:text-white">
-              Contact
-            </Link>
-          </li>
-
-          {/* Resume Button */}
+        <ul className="hidden items-center gap-6 md:flex">
+          {links.map((link) => (
+            <li key={link.href}>
+              <a href={link.href} className="text-sm hover:text-white">
+                {link.label}
+              </a>
+            </li>
+          ))}
           <li>
             <a
               href="/Aniket New.pdf"
               download
-              className="border border-white px-4 py-2 rounded-full text-white hover:bg-white hover:text-black transition"
+              className="rounded-full border border-white px-4 py-2 text-sm text-white transition hover:bg-white hover:text-black"
             >
               Resume
             </a>
           </li>
         </ul>
 
-        {/* Mobile Hamburger */}
         <button
-          className="md:hidden text-white text-xl"
+          className="text-xl text-white md:hidden"
           onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle Menu"
+          aria-label="Toggle menu"
         >
           {isOpen ? <FaTimes /> : <FaBars />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black/90 backdrop-blur px-6 py-6">
-          <ul className="flex flex-col gap-6 text-center text-lg">
-
-            <li onClick={() => setIsOpen(false)}>
-              <Link to="/" className="text-white">
-                Home
-              </Link>
-            </li>
-
-            <li onClick={() => setIsOpen(false)}>
-              <Link to="/about" className="text-white">
-                About
-              </Link>
-            </li>
-
-            <li onClick={() => setIsOpen(false)}>
-              <Link to="/projects" className="text-white">
-                Projects
-              </Link>
-            </li>
-
-            <li onClick={() => setIsOpen(false)}>
-              <Link to="/contact" className="text-white">
-                Contact
-              </Link>
-            </li>
-
-            {/* Resume Button Mobile */}
+        <div className="bg-black/90 px-6 py-6 backdrop-blur md:hidden">
+          <ul className="flex flex-col gap-5 text-center text-lg">
+            {links.map((link) => (
+              <li key={link.href} onClick={() => setIsOpen(false)}>
+                <a href={link.href} className="text-white">
+                  {link.label}
+                </a>
+              </li>
+            ))}
             <li>
               <a
                 href="/Aniket New.pdf"
                 download
-                className="inline-block border border-white px-6 py-3 rounded-full text-white hover:bg-white hover:text-black transition"
+                className="inline-block rounded-full border border-white px-6 py-3 text-white"
                 onClick={() => setIsOpen(false)}
               >
                 Download Resume
               </a>
             </li>
-
           </ul>
         </div>
       )}

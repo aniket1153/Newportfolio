@@ -4,7 +4,7 @@ import { FaPaperPlane } from "react-icons/fa";
 export default function SideButton() {
   return (
     <div
-      className="fixed right-0 md:right-1 top-1/2 -translate-y-1/2 z-40"
+      className="fixed right-0 top-1/2 z-40 hidden -translate-y-1/2 xl:right-1 xl:block"
       data-aos="fade-left"
     >
       <a

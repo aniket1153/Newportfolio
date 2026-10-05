@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 
 const lines = [
   "Hi, I'm Aniket Joshi.",
-  "Full Stack Developer.",
-  "Building scalable digital experiences."
+  "Software Developer.",
+  "React Native, MERN, and backend systems."
 ];
 
 const CinematicIntro = ({ onFinish }) => {
@@ -77,7 +77,7 @@ const CinematicIntro = ({ onFinish }) => {
 
           {/* Tagline */}
           <p className="mt-8 text-lg md:text-xl text-gray-400 tracking-wide">
-            Crafting Modern Web & Mobile Experiences
+            Web, mobile, and backend systems
           </p>
         </div>
       )}
