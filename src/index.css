@@ -189,3 +189,14 @@ body {
 .backdrop-blur-lg {
   backdrop-filter: blur(12px);
 }
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg); }
+  20% { transform: rotate(-14deg); }
+  40% { transform: rotate(10deg); }
+  60% { transform: rotate(-8deg); }
+  80% { transform: rotate(6deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-\[wave_1\.6s_ease-in-out_0\.3s_1\] { animation: none; }
+}

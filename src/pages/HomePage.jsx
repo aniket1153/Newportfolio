@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import SideButton from "../components/SideButton";
+import ScrollLine from "../components/ScrollLine";
 import HeroSection from "../components/HeroSection";
 import AboutSection from "../components/AboutSection";
 import ExperienceSection from "../components/ExperienceSection";
@@ -20,6 +21,7 @@ const HomePage = () => {
   return (
     <div className="font-sans">
       <Navbar />
+      <ScrollLine />
       <SideButton />
       <HeroSection />
       <AboutSection />
